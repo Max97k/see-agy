@@ -1,0 +1,3 @@
+## 2024-05-24 - React State Thrashing on Canvas Elements
+**Learning:** Updating React state (`setTooltipPos`) inside high-frequency DOM events like `mousemove` causes severe rendering thrashing and lag, especially in components with hundreds of DOM nodes (like a Treemap overlay). Furthermore, if a `requestAnimationFrame` loop `useEffect` depends on rapidly changing props (like `fileEventsMap`), the loop will be constantly torn down and recreated, causing animation jank.
+**Action:** Use `useRef` to directly mutate DOM styles for high-frequency updates like mouse-following tooltips to bypass the React render cycle. For animation loops, store rapidly changing props in a `useRef` and read from the ref inside the loop, removing the prop from the `useEffect` dependency array.
