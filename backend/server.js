@@ -8,7 +8,29 @@ const chokidar = require('chokidar');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+const envOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : [];
+
+const ALLOWED_ORIGINS = [
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'http://localhost:4173', // Vite preview default port
+  'http://127.0.0.1:4173',
+  ...envOrigins
+];
+
+// 🛡️ Sentinel: Restrict CORS to specific local origins to prevent CSRF and cross-origin attacks
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || ALLOWED_ORIGINS.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(null, false);
+    }
+  }
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const PORT = parseInt(process.env.PORT || '3005', 10);
@@ -101,7 +123,8 @@ function getDirTree(dirPath = WATCH_DIR, relativeBase = WATCH_DIR) {
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    // 🛡️ Sentinel: Match Socket.io CORS policy with Express
+    origin: ALLOWED_ORIGINS,
     methods: ["GET", "POST"]
   }
 });
