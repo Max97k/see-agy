@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useMemo } from 'react';
+import React, { useRef, useEffect, useState, useMemo, useLayoutEffect } from 'react';
 import * as d3 from 'd3';
 import { FileCode, Folder, Clock, HardDrive } from 'lucide-react';
 
@@ -25,9 +25,10 @@ function formatBytes(bytes) {
 export default function TreemapCanvas({ dirTree, fileEventsMap }) {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
+  const tooltipRef = useRef(null); // Ref for direct DOM manipulation of tooltip
+  const mousePosRef = useRef({ x: -9999, y: -9999 }); // Track latest mouse position for initial render
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
   const [hoveredNode, setHoveredNode] = useState(null);
-  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
 
   // Handle ResizeObserver for dynamic canvas sizing
   useEffect(() => {
@@ -74,6 +75,12 @@ export default function TreemapCanvas({ dirTree, fileEventsMap }) {
 
     return { rootNode: root, leaves: leavesList, directories: dirsList };
   }, [dirTree, dimensions]);
+
+  // Ref to hold latest events without triggering hook re-run
+  const fileEventsMapRef = useRef(fileEventsMap);
+  useEffect(() => {
+    fileEventsMapRef.current = fileEventsMap;
+  }, [fileEventsMap]);
 
   // Canvas 60fps Rendering Loop with 1.5s Linear Decay
   useEffect(() => {
@@ -135,7 +142,8 @@ export default function TreemapCanvas({ dirTree, fileEventsMap }) {
 
         // Event Decay Highlight
         const normPath = normalizePath(leaf.data.path);
-        const eventData = fileEventsMap ? fileEventsMap.get(normPath) : null;
+        const latestEventsMap = fileEventsMapRef.current;
+        const eventData = latestEventsMap ? latestEventsMap.get(normPath) : null;
 
         if (eventData) {
           const elapsed = now - eventData.timestamp;
@@ -172,7 +180,15 @@ export default function TreemapCanvas({ dirTree, fileEventsMap }) {
     return () => {
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
     };
-  }, [dimensions, leaves, directories, fileEventsMap]);
+  }, [dimensions, leaves, directories]); // Removed fileEventsMap
+
+  // Apply initial position when tooltip mounts or node changes
+  useLayoutEffect(() => {
+    if (hoveredNode && tooltipRef.current) {
+      tooltipRef.current.style.left = `${mousePosRef.current.x}px`;
+      tooltipRef.current.style.top = `${mousePosRef.current.y - 8}px`;
+    }
+  }, [hoveredNode]);
 
   // Handle Mouse Hover on Canvas area
   const handleMouseMove = (e) => {
@@ -181,7 +197,13 @@ export default function TreemapCanvas({ dirTree, fileEventsMap }) {
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
 
-    setTooltipPos({ x: e.clientX, y: e.clientY });
+    mousePosRef.current = { x: e.clientX, y: e.clientY };
+
+    // Directly mutate tooltip DOM style instead of state to prevent re-renders
+    if (tooltipRef.current) {
+      tooltipRef.current.style.left = `${e.clientX}px`;
+      tooltipRef.current.style.top = `${e.clientY - 8}px`;
+    }
 
     // Find leaf under mouse
     const found = leaves.find(
@@ -189,13 +211,13 @@ export default function TreemapCanvas({ dirTree, fileEventsMap }) {
     );
 
     if (found) {
-      setHoveredNode(found);
+      setHoveredNode(prev => prev === found ? prev : found); // Functional update to bail out early
     } else {
       // Check if mouse is over a directory header
       const foundDir = directories.find(
         (d) => mouseX >= d.x0 && mouseX <= d.x1 && mouseY >= d.y0 && mouseY <= d.y1
       );
-      setHoveredNode(foundDir || null);
+      setHoveredNode(prev => prev === (foundDir || null) ? prev : (foundDir || null));
     }
   };
 
@@ -279,11 +301,8 @@ export default function TreemapCanvas({ dirTree, fileEventsMap }) {
       {/* Interactive Tooltip Overlay */}
       {hoveredNode && (
         <div
+          ref={tooltipRef}
           className="fixed z-50 pointer-events-none bg-slate-900/95 text-slate-100 border border-slate-700 rounded-md p-2.5 shadow-xl text-xs backdrop-blur-md max-w-xs space-y-1.5 transform -translate-x-1/2 -translate-y-full mb-2"
-          style={{
-            left: `${tooltipPos.x}px`,
-            top: `${tooltipPos.y - 8}px`,
-          }}
         >
           <div className="flex items-center gap-1.5 font-semibold text-sky-400 border-b border-slate-800 pb-1">
             {hoveredNode.children ? (
