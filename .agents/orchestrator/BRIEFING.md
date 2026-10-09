@@ -6,13 +6,13 @@ Build the non-invasive AGY CLI Web Visualizer Dashboard (Backend Express+Socket.
 ## 🔒 My Identity
 - Archetype: self
 - Roles: orchestrator, user_liaison, human_reporter, successor
-- Working directory: /home/kuo/see-agy/.agents/orchestrator
+- Working directory: /home/user/see-agy/.agents/orchestrator
 - Original parent: top-level
 - Original parent conversation ID: top-level
 
 ## 🔒 My Workflow
 - **Pattern**: Project Pattern
-- **Scope document**: /home/kuo/see-agy/.agents/orchestrator/PROJECT.md
+- **Scope document**: /home/user/see-agy/.agents/orchestrator/PROJECT.md
 1. **Decompose**: Survey codebase via 3 Explorers, create PROJECT.md with feature inventory & milestones, spawn sub-orchestrators / parallel workers for backend, frontend, and E2E test infra.
 2. **Dispatch & Execute**:
    - Iteration loop per milestone: Explorer -> Worker -> Reviewer -> Challenger -> Forensic Auditor -> Gate.
@@ -70,9 +70,9 @@ Build the non-invasive AGY CLI Web Visualizer Dashboard (Backend Express+Socket.
 - Safety timer: none
 
 ## Artifact Index
-- /home/kuo/see-agy/ORIGINAL_REQUEST.md — Original request
-- /home/kuo/see-agy/.agents/orchestrator/DISPATCH.md — Dispatch log
-- /home/kuo/see-agy/.agents/orchestrator/BRIEFING.md — Briefing state
-- /home/kuo/see-agy/.agents/orchestrator/progress.md — Progress tracking
-- /home/kuo/see-agy/.agents/orchestrator/PROJECT.md — Master Project Specification
-- /home/kuo/see-agy/.agents/orchestrator/GATE_STATUS.md — Gate Status Record
+- /home/user/see-agy/ORIGINAL_REQUEST.md — Original request
+- /home/user/see-agy/.agents/orchestrator/DISPATCH.md — Dispatch log
+- /home/user/see-agy/.agents/orchestrator/BRIEFING.md — Briefing state
+- /home/user/see-agy/.agents/orchestrator/progress.md — Progress tracking
+- /home/user/see-agy/.agents/orchestrator/PROJECT.md — Master Project Specification
+- /home/user/see-agy/.agents/orchestrator/GATE_STATUS.md — Gate Status Record

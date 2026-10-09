@@ -6,7 +6,7 @@ Milestone 3 Backend Realtime Stress Testing & Adversarial Verification
 ## 🔒 My Identity
 - Archetype: empirical_challenger
 - Roles: critic, specialist
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_1
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_challenger_m3_1
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: M3 Final Integration & Audit
 - Instance: 1 of 1
@@ -22,7 +22,7 @@ Milestone 3 Backend Realtime Stress Testing & Adversarial Verification
 
 ## Review Scope
 - **Files to review**: `backend/server.js`, `tests/e2e.test.js`, `scripts/mock_generator.js`
-- **Interface contracts**: `/home/kuo/see-agy/.agents/orchestrator/PROJECT.md`
+- **Interface contracts**: `/home/user/see-agy/.agents/orchestrator/PROJECT.md`
 - **Review criteria**: Performance under burst load, edge cases (malformed JSON, out-of-workspace paths, outer quote stripping, non-existent log paths), zero crashes, no memory leaks or unhandled rejections.
 
 ## Attack Surface
@@ -43,8 +43,8 @@ Milestone 3 Backend Realtime Stress Testing & Adversarial Verification
 - Final Verdict: APPROVE.
 
 ## Artifact Index
-- `/home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_1/DISPATCH.md` — Dispatch log
-- `/home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_1/BRIEFING.md` — Persistent briefing
-- `/home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_1/progress.md` — Liveness heartbeat
-- `/home/kuo/see-agy/tests/empirical_stress_and_edge_cases.js` — Empirical test harness script
-- `/home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_1/handoff.md` — Handoff report
+- `/home/user/see-agy/.agents/teamwork_preview_challenger_m3_1/DISPATCH.md` — Dispatch log
+- `/home/user/see-agy/.agents/teamwork_preview_challenger_m3_1/BRIEFING.md` — Persistent briefing
+- `/home/user/see-agy/.agents/teamwork_preview_challenger_m3_1/progress.md` — Liveness heartbeat
+- `/home/user/see-agy/tests/empirical_stress_and_edge_cases.js` — Empirical test harness script
+- `/home/user/see-agy/.agents/teamwork_preview_challenger_m3_1/handoff.md` — Handoff report

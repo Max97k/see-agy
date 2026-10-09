@@ -1,12 +1,12 @@
 # BRIEFING — 2026-07-26T05:45:00Z
 
 ## Mission
-Survey the /home/kuo/see-agy directory, system environment, and dependencies for AGY CLI Web Visualizer Dashboard, and produce analysis and handoff reports.
+Survey the /home/user/see-agy directory, system environment, and dependencies for AGY CLI Web Visualizer Dashboard, and produce analysis and handoff reports.
 
 ## 🔒 My Identity
 - Archetype: explorer
 - Roles: survey investigator
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_1
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_explorer_survey_1
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Survey Phase
 
@@ -20,7 +20,7 @@ Survey the /home/kuo/see-agy directory, system environment, and dependencies for
 - Updated: 2026-07-26T05:46:00Z
 
 ## Investigation State
-- **Explored paths**: `/home/kuo/see-agy`, `backend/`, `frontend/`, `~/.gemini/antigravity-cli/brain`
+- **Explored paths**: `/home/user/see-agy`, `backend/`, `frontend/`, `~/.gemini/antigravity-cli/brain`
 - **Key findings**: Backend complete on Port 3001; Frontend missing `node_modules`, `index.html`, `tailwind.config.js`, `src/`; PID 15142 occupies port 3000.
 - **Unexplored areas**: None. Survey complete.
 

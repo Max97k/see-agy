@@ -6,14 +6,14 @@ Create E2E Testing Infrastructure (Milestone 0): mock generator script, test sui
 ## 🔒 My Identity
 - Archetype: worker_m0_test
 - Roles: implementer, qa, specialist
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_worker_m0_test
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_worker_m0_test
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Milestone 0 (E2E Testing Infrastructure)
 
 ## 🔒 Key Constraints
-- Exclusive ownership: /home/kuo/see-agy/scripts/, /home/kuo/see-agy/tests/, /home/kuo/see-agy/TEST_READY.md
+- Exclusive ownership: /home/user/see-agy/scripts/, /home/user/see-agy/tests/, /home/user/see-agy/TEST_READY.md
 - DO NOT CHEAT. No hardcoding or facade implementations.
-- Handoff report to /home/kuo/see-agy/.agents/teamwork_preview_worker_m0_test/handoff.md.
+- Handoff report to /home/user/see-agy/.agents/teamwork_preview_worker_m0_test/handoff.md.
 
 ## Current Parent
 - Conversation ID: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10

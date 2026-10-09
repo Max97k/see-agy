@@ -1,10 +1,10 @@
 ## 2026-07-26T05:44:55Z
 
 You are explorer_2 on the Survey phase for the AGY CLI Web Visualizer Dashboard.
-Working directory for your metadata: /home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2
+Working directory for your metadata: /home/user/see-agy/.agents/teamwork_preview_explorer_survey_2
 
 MANDATORY READ:
-1. Read /home/kuo/see-agy/ORIGINAL_REQUEST.md
+1. Read /home/user/see-agy/ORIGINAL_REQUEST.md
 
 TASK:
 Investigate AGY CLI transcript logs and event format:
@@ -13,6 +13,6 @@ Investigate AGY CLI transcript logs and event format:
 3. Document exact JSON fields, event structures, and edge cases (e.g. non-existent log directory, file truncation, streaming updates).
 
 OUTPUT:
-Write your detailed analysis report to /home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2/analysis.md
-Write your handoff report to /home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2/handoff.md
+Write your detailed analysis report to /home/user/see-agy/.agents/teamwork_preview_explorer_survey_2/analysis.md
+Write your handoff report to /home/user/see-agy/.agents/teamwork_preview_explorer_survey_2/handoff.md
 Send a message when finished.

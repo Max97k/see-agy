@@ -18,9 +18,9 @@ AGY CLI transcript logs are stored in individual session directories under the u
 > **Important Path Correction**: The requirement mentions `~/.gemini/antigravity-cli/brain/*/logs/transcript.jsonl`. In the actual AGY CLI installation, log files are located inside `.system_generated/logs/`.
 > 
 > **Recommended Chokidar Glob Pattern**:
-> `/home/kuo/.gemini/antigravity-cli/brain/*/.system_generated/logs/transcript.jsonl`
+> `/home/user/.gemini/antigravity-cli/brain/*/.system_generated/logs/transcript.jsonl`
 > or
-> `/home/kuo/.gemini/antigravity-cli/brain/**/transcript.jsonl`
+> `/home/user/.gemini/antigravity-cli/brain/**/transcript.jsonl`
 
 ### 2.2 `transcript.jsonl` vs `transcript_full.jsonl`
 | Characteristic | `transcript.jsonl` | `transcript_full.jsonl` |
@@ -85,7 +85,7 @@ When `type == "PLANNER_RESPONSE"`, the entry includes `tool_calls`:
     {
       "name": "view_file",
       "args": {
-        "AbsolutePath": "\"/home/kuo/see-agy/ORIGINAL_REQUEST.md\"",
+        "AbsolutePath": "\"/home/user/see-agy/ORIGINAL_REQUEST.md\"",
         "toolAction": "\"Reading original request\"",
         "toolSummary": "\"View ORIGINAL_REQUEST.md\""
       }
@@ -113,7 +113,7 @@ To broadcast visual decay events to the frontend dashboard:
 
 ### 4.3 String Normalization / Unquoting Rule
 In `transcript.jsonl`, string arguments in `tc.args` are wrapped in extra double quotes:
-`tc.args.AbsolutePath` = `'"/home/kuo/see-agy/ORIGINAL_REQUEST.md"'`
+`tc.args.AbsolutePath` = `'"/home/user/see-agy/ORIGINAL_REQUEST.md"'`
 
 **Normalization logic in JavaScript**:
 ```js
@@ -134,7 +134,7 @@ function normalizePath(rawPath) {
 
 **Backend Filter Rule**:
 ```js
-const WORKSPACE_ROOT = '/home/kuo/see-agy';
+const WORKSPACE_ROOT = '/home/user/see-agy';
 
 function resolveWorkspaceRelativePath(absolutePath) {
   const clean = normalizePath(absolutePath);
@@ -208,6 +208,6 @@ An agent's state transitions can be tracked using a hybrid approach:
 1. **Verify Log File Discovery**:
    Run: `find ~/.gemini/antigravity-cli/brain -name "transcript.jsonl"`
 2. **Verify String Unquoting**:
-   Run: `python3 -c "import json; l=open('/home/kuo/.gemini/antigravity-cli/brain/084ccde8-e4fc-4bc0-99fd-43041ccb6f2a/.system_generated/logs/transcript.jsonl').readlines()[3]; print(json.loads(l)['tool_calls'][0]['args']['AbsolutePath'])"`
+   Run: `python3 -c "import json; l=open('/home/user/.gemini/antigravity-cli/brain/084ccde8-e4fc-4bc0-99fd-43041ccb6f2a/.system_generated/logs/transcript.jsonl').readlines()[3]; print(json.loads(l)['tool_calls'][0]['args']['AbsolutePath'])"`
 3. **Verify Settings Model Extraction**:
-   Run: `python3 -c "import json; print(json.load(open('/home/kuo/.gemini/antigravity-cli/settings.json'))['model'])"`
+   Run: `python3 -c "import json; print(json.load(open('/home/user/.gemini/antigravity-cli/settings.json'))['model'])"`

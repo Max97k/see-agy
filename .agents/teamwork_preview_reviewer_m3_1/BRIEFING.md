@@ -6,7 +6,7 @@ Perform Milestone 3 Code & Interface Review and Adversarial Review of backend/se
 ## 🔒 My Identity
 - Archetype: reviewer / critic
 - Roles: reviewer, critic
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_1
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_1
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Milestone 3 Code & Interface Review
 - Instance: 1 of 1
@@ -46,7 +46,7 @@ Perform Milestone 3 Code & Interface Review and Adversarial Review of backend/se
 - Issued verdict: APPROVE.
 
 ## Artifact Index
-- /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_1/DISPATCH.md — Dispatch log
-- /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_1/BRIEFING.md — Working memory index
-- /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_1/progress.md — Liveness heartbeat
-- /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_1/handoff.md — Final handoff report
+- /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_1/DISPATCH.md — Dispatch log
+- /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_1/BRIEFING.md — Working memory index
+- /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_1/progress.md — Liveness heartbeat
+- /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_1/handoff.md — Final handoff report

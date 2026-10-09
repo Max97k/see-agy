@@ -127,13 +127,13 @@ Independent verification steps:
 
 1. **Verify Production Build**:
    ```bash
-   cd /home/kuo/see-agy/frontend && npm run build
+   cd /home/user/see-agy/frontend && npm run build
    ```
    Confirm exit code 0 and generated bundle files in `dist/`.
 
 2. **Verify E2E Test Suite**:
    ```bash
-   cd /home/kuo/see-agy && node tests/e2e.test.js
+   cd /home/user/see-agy && node tests/e2e.test.js
    ```
    Confirm 11/11 E2E tests pass.
 

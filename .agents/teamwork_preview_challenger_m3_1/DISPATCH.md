@@ -2,11 +2,11 @@
 
 <USER_REQUEST>
 You are challenger_1 assigned to Milestone 3 Backend Realtime Stress Testing.
-Working directory for metadata: /home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_1
+Working directory for metadata: /home/user/see-agy/.agents/teamwork_preview_challenger_m3_1
 
 MANDATORY READ:
-1. /home/kuo/see-agy/ORIGINAL_REQUEST.md
-2. /home/kuo/see-agy/.agents/orchestrator/PROJECT.md
+1. /home/user/see-agy/ORIGINAL_REQUEST.md
+2. /home/user/see-agy/.agents/orchestrator/PROJECT.md
 
 TASK:
 1. Empirically verify backend server performance under stress.
@@ -16,5 +16,5 @@ TASK:
 5. Verify zero crashes, memory leaks, or unhandled promise rejections.
 
 OUTPUT:
-Write your handoff report to /home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_1/handoff.md with explicit Verdict: APPROVE or REJECT. Send a message when finished.
+Write your handoff report to /home/user/see-agy/.agents/teamwork_preview_challenger_m3_1/handoff.md with explicit Verdict: APPROVE or REJECT. Send a message when finished.
 </USER_REQUEST>

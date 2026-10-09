@@ -1,6 +1,6 @@
 # Forensic Audit Handoff Report
 
-**Work Product**: `/home/kuo/see-agy` (AGY CLI Web Visualizer Dashboard)  
+**Work Product**: `/home/user/see-agy` (AGY CLI Web Visualizer Dashboard)  
 **Auditor**: `auditor_1`  
 **Profile**: General Project (Forensic Integrity)  
 **Integrity Mode**: Development (from `ORIGINAL_REQUEST.md`)  
@@ -42,7 +42,7 @@ A comprehensive, independent forensic integrity audit of the AGY CLI Web Visuali
    - `scripts/mock_generator.js`: Parses CLI flags (`-t`, `-p`, `-s`, `-m`, `-c`, `--burst`, `--delay`), issuing HTTP POST requests via Node's `http.request` or `socket.io-client`.
 
 4. **Empirical Execution Commands & Output**:
-   - Command: `node tests/e2e.test.js` (executed in `/home/kuo/see-agy`)
+   - Command: `node tests/e2e.test.js` (executed in `/home/user/see-agy`)
      ```text
      ====================================================
        AGY Web Visualizer - E2E Opaque-box Test Suite    
@@ -77,7 +77,7 @@ A comprehensive, independent forensic integrity audit of the AGY CLI Web Visuali
 
      Result: PASSED - All 11 tests completed successfully!
      ```
-   - Command: `npm run build` (executed in `/home/kuo/see-agy/frontend`)
+   - Command: `npm run build` (executed in `/home/user/see-agy/frontend`)
      ```text
      vite v5.4.21 building for production...
      ✓ 2095 modules transformed.
@@ -108,7 +108,7 @@ A comprehensive, independent forensic integrity audit of the AGY CLI Web Visuali
 
 ## 5. Conclusion
 
-The work product in `/home/kuo/see-agy` passes all forensic integrity checks. The backend middleware server, D3 treemap canvas decay renderer, mascot status widget, CLI mock event generator, and E2E test suite are fully authentic and operational.
+The work product in `/home/user/see-agy` passes all forensic integrity checks. The backend middleware server, D3 treemap canvas decay renderer, mascot status widget, CLI mock event generator, and E2E test suite are fully authentic and operational.
 
 **Final Verdict**: **Verdict: CLEAN**
 
@@ -117,7 +117,7 @@ The work product in `/home/kuo/see-agy` passes all forensic integrity checks. Th
 ## 6. Verification Method
 
 To independently verify this audit:
-1. Navigate to `/home/kuo/see-agy`.
+1. Navigate to `/home/user/see-agy`.
 2. Run the E2E test suite:
    ```bash
    node tests/e2e.test.js

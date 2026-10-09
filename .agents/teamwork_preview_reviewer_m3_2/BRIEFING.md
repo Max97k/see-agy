@@ -6,7 +6,7 @@ Milestone 3 UI/UX & Decay Engine Review: Review frontend visualizer components, 
 ## 🔒 My Identity
 - Archetype: reviewer_2
 - Roles: reviewer, critic
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_2
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_2
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Milestone 3 UI/UX & Decay Engine Review
 - Instance: 1 of 1
@@ -39,6 +39,6 @@ Milestone 3 UI/UX & Decay Engine Review: Review frontend visualizer components, 
 - Issued verdict: APPROVE.
 
 ## Artifact Index
-- /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_2/DISPATCH.md - Dispatch input
-- /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_2/progress.md - Heartbeat log
-- /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_2/handoff.md - Handoff report
+- /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_2/DISPATCH.md - Dispatch input
+- /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_2/progress.md - Heartbeat log
+- /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_2/handoff.md - Handoff report

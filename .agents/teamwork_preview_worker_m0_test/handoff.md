@@ -3,14 +3,14 @@
 ## 1. Observation
 
 ### Created Files & Code Executed
-1. Created `/home/kuo/see-agy/scripts/mock_generator.js`
+1. Created `/home/user/see-agy/scripts/mock_generator.js`
    - Command-line utility to send mock file events (`READ`/`WRITE`) and agent status updates (`working`/`idle`, model name, step count).
    - Supports REST endpoints (`http://localhost:3001/api/mock/file_event` and `http://localhost:3001/api/mock/agent_status`) and direct Socket.io emissions.
    - Command tested: `node scripts/mock_generator.js -t READ -p frontend/src/App.jsx`
      - Output: `[MockGenerator] Target: http://localhost:3001 | Mode: REST`
      - Output: `[MockGenerator] [Burst 1/1] REST file_event response: { success: true, event: { path: 'frontend/src/App.jsx', type: 'READ' } }`
 
-2. Created `/home/kuo/see-agy/tests/e2e.test.js`
+2. Created `/home/user/see-agy/tests/e2e.test.js`
    - Test suite executing 11 test cases across 4 Tiers:
      - Tier 1: Feature Coverage (4 tests: `dir_tree` structure, `file_event` WRITE, `file_event` READ, `agent_status` transitions).
      - Tier 2: Boundary & Corner Cases (4 tests: non-existent paths, empty payload 400 validation, rapid burst events, out-of-workspace paths).
@@ -53,7 +53,7 @@ Failed          : 0
 Result: PASSED - All 11 tests completed successfully!
 ```
 
-3. Published `/home/kuo/see-agy/TEST_READY.md` detailing test suite summary, tier breakdown, commands, and artifacts.
+3. Published `/home/user/see-agy/TEST_READY.md` detailing test suite summary, tier breakdown, commands, and artifacts.
 
 ---
 
@@ -89,17 +89,17 @@ To independently verify the implementation:
 
 1. **Run Mock Generator CLI**:
    ```bash
-   node /home/kuo/see-agy/scripts/mock_generator.js -t READ -p frontend/src/App.jsx
-   node /home/kuo/see-agy/scripts/mock_generator.js -t WRITE -p backend/server.js
-   node /home/kuo/see-agy/scripts/mock_generator.js -s working -m "Gemini 3.6 Flash" -c 50
+   node /home/user/see-agy/scripts/mock_generator.js -t READ -p frontend/src/App.jsx
+   node /home/user/see-agy/scripts/mock_generator.js -t WRITE -p backend/server.js
+   node /home/user/see-agy/scripts/mock_generator.js -s working -m "Gemini 3.6 Flash" -c 50
    ```
    *Expected result*: Command exits with code 0 and outputs HTTP 200 JSON success responses.
 
 2. **Run E2E Test Suite**:
    ```bash
-   node /home/kuo/see-agy/tests/e2e.test.js
+   node /home/user/see-agy/tests/e2e.test.js
    ```
    *Expected result*: Command exits with code 0 and reports `Result: PASSED - All 11 tests completed successfully!`.
 
 3. **Inspect Documentation**:
-   Read `/home/kuo/see-agy/TEST_READY.md` to review the tier breakdown and test count summary.
+   Read `/home/user/see-agy/TEST_READY.md` to review the tier breakdown and test count summary.

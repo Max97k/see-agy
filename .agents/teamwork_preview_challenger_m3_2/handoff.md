@@ -8,7 +8,7 @@
 ## 1. Observation
 
 ### 1.1 Frontend Build & Bundle Analysis
-- Command: `npm run build` in `/home/kuo/see-agy/frontend`
+- Command: `npm run build` in `/home/user/see-agy/frontend`
 - Output:
   ```text
   vite v5.4.21 building for production...
@@ -33,7 +33,7 @@
 ### 1.4 Direct Code Inspection
 
 #### Observation A: Unclamped Alpha in Canvas Decay Render Loop
-File: `/home/kuo/see-agy/frontend/src/components/TreemapCanvas.jsx`
+File: `/home/user/see-agy/frontend/src/components/TreemapCanvas.jsx`
 Lines 141-147:
 ```javascript
 const elapsed = now - eventData.timestamp;
@@ -50,7 +50,7 @@ When `eventData.timestamp` is set in the future (e.g. clock skew between machine
 According to HTML Canvas 2D / CSS specifications, alpha > 1.0 is an invalid color syntax. Canvas 2D silently ignores invalid `ctx.fillStyle` assignments, preserving whatever color was previously set on the context, leading to visual corruption and stuck color highlights.
 
 #### Observation B: Empty Directory Treemap Misclassification
-File: `/home/kuo/see-agy/frontend/src/components/TreemapCanvas.jsx`
+File: `/home/user/see-agy/frontend/src/components/TreemapCanvas.jsx`
 Lines 57-75:
 ```javascript
 const root = d3.hierarchy(dirTree)
@@ -103,13 +103,13 @@ To independently verify these findings:
 
 1. **Build Check**:
    ```bash
-   cd /home/kuo/see-agy/frontend
+   cd /home/user/see-agy/frontend
    npm run build
    ```
 
 2. **Empirical Stress Test Suite Execution**:
    ```bash
-   cd /home/kuo/see-agy
+   cd /home/user/see-agy
    node tests/decay_loop_stress.test.js
    ```
    Inspect failures 1.5 and 2.2 in the command output.

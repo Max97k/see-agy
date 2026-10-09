@@ -6,7 +6,7 @@ Investigate AGY CLI transcript logs and event format (`~/.gemini/antigravity-cli
 ## 🔒 My Identity
 - Archetype: Teamwork explorer
 - Roles: explorer_2 (Survey phase)
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_explorer_survey_2
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Survey phase
 
@@ -35,8 +35,8 @@ Investigate AGY CLI transcript logs and event format (`~/.gemini/antigravity-cli
 - Written handoff report to `handoff.md`.
 
 ## Artifact Index
-- `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2/DISPATCH.md` — Dispatch record
-- `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2/BRIEFING.md` — Briefing document
-- `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2/progress.md` — Progress log
-- `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2/analysis.md` — Analysis report
-- `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_2/handoff.md` — Handoff report
+- `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_2/DISPATCH.md` — Dispatch record
+- `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_2/BRIEFING.md` — Briefing document
+- `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_2/progress.md` — Progress log
+- `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_2/analysis.md` — Analysis report
+- `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_2/handoff.md` — Handoff report

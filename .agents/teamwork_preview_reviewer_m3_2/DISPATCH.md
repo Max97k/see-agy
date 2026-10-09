@@ -1,10 +1,10 @@
 ## 2026-07-26T05:48:41Z
 You are reviewer_2 assigned to Milestone 3 UI/UX & Decay Engine Review.
-Working directory for metadata: /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_2
+Working directory for metadata: /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_2
 
 MANDATORY READ:
-1. /home/kuo/see-agy/ORIGINAL_REQUEST.md
-2. /home/kuo/see-agy/.agents/orchestrator/PROJECT.md
+1. /home/user/see-agy/ORIGINAL_REQUEST.md
+2. /home/user/see-agy/.agents/orchestrator/PROJECT.md
 
 TASK:
 1. Review frontend visualizer components: TreemapCanvas.jsx, StatusWidget.jsx, App.jsx.
@@ -13,4 +13,4 @@ TASK:
 4. Verify clean production build by running npm run build inside frontend/.
 
 OUTPUT:
-Write your handoff report to /home/kuo/see-agy/.agents/teamwork_preview_reviewer_m3_2/handoff.md with explicit Verdict: APPROVE or REQUEST_CHANGES. Send a message when finished.
+Write your handoff report to /home/user/see-agy/.agents/teamwork_preview_reviewer_m3_2/handoff.md with explicit Verdict: APPROVE or REQUEST_CHANGES. Send a message when finished.

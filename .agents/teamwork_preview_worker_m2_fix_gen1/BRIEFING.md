@@ -6,12 +6,12 @@ Remediate 2 defects in `frontend/src/components/TreemapCanvas.jsx` (Clock Skew U
 ## 🔒 My Identity
 - Archetype: implementer/qa/specialist
 - Roles: implementer, qa, specialist
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Remediation of TreemapCanvas defects
 
 ## 🔒 Key Constraints
-- Exclusive write ownership: /home/kuo/see-agy/frontend/src/components/TreemapCanvas.jsx
+- Exclusive write ownership: /home/user/see-agy/frontend/src/components/TreemapCanvas.jsx
 - No hardcoding or cheating.
 
 ## Current Parent
@@ -39,5 +39,5 @@ None
 - Initializing task context and briefing.
 
 ## Artifact Index
-- `/home/kuo/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1/DISPATCH.md` — Task prompt record
-- `/home/kuo/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1/BRIEFING.md` — Agent briefing state
+- `/home/user/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1/DISPATCH.md` — Task prompt record
+- `/home/user/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1/BRIEFING.md` — Agent briefing state

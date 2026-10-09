@@ -97,7 +97,7 @@ Direct empirical observations from command execution and codebase analysis:
 3. **Observed Stress & Memory Stability**: Under 500 concurrent REST events emitted simultaneously, the server processed all 500 requests (HTTP 200), maintained stable heap memory (heap delta ~4.77 MB during test runner execution), and remained 100% healthy with zero memory leak or server degradation (Observation 3).
 4. **Observed Edge Case Safety**:
    - Malformed JSON strings written directly to transcript `.jsonl` files were caught safely by `JSON.parse` error boundaries without crashing the transcript watcher process (Observations 3 & 4).
-   - Traversal attack paths (`../../etc/passwd`, `/etc/passwd`, `/home/kuo/see-agy-other/file.txt`, `.`, `..`) were contained by `normalizeWorkspacePath` and filtered out safely (Observations 3 & 4).
+   - Traversal attack paths (`../../etc/passwd`, `/etc/passwd`, `/home/user/see-agy-other/file.txt`, `.`, `..`) were contained by `normalizeWorkspacePath` and filtered out safely (Observations 3 & 4).
    - Double-quoted strings (`""backend/server.js""`) were unquoted cleanly to `backend/server.js` before emit (Observations 3 & 4).
    - Watched log directories created and deleted during live server execution did not cause unhandled stream errors or process termination (Observation 3).
 5. **Conclusion Support**: Since all stress tests, burst tests, edge case validations, and health checks succeeded with zero crashes, zero memory leaks, and zero unhandled promise rejections, the backend real-time implementation fulfills all Milestone 3 quality criteria.
@@ -118,18 +118,18 @@ To independently verify these results:
 
 1. Run the E2E test suite:
    ```bash
-   node /home/kuo/see-agy/tests/e2e.test.js
+   node /home/user/see-agy/tests/e2e.test.js
    ```
    *Expected output*: 11/11 tests pass with exit code 0.
 
 2. Run the 50-event rapid burst test:
    ```bash
-   node /home/kuo/see-agy/scripts/mock_generator.js --burst 50 --delay 5
+   node /home/user/see-agy/scripts/mock_generator.js --burst 50 --delay 5
    ```
    *Expected output*: 50/50 events emitted successfully with exit code 0.
 
 3. Run the empirical stress and edge case test harness:
    ```bash
-   node /home/kuo/see-agy/tests/empirical_stress_and_edge_cases.js
+   node /home/user/see-agy/tests/empirical_stress_and_edge_cases.js
    ```
    *Expected output*: 8/8 tests pass with exit code 0.

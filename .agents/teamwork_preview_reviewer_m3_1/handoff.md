@@ -2,7 +2,7 @@
 
 ## 1. Observation
 
-Direct code and test observations from `/home/kuo/see-agy`:
+Direct code and test observations from `/home/user/see-agy`:
 
 - **Backend (`backend/server.js`)**:
   - Implements Express + HTTP + Socket.io server on Port 3001.
@@ -71,7 +71,7 @@ The AGY CLI Web Visualizer Dashboard (backend, frontend, mock generator, and E2E
 
 ## 5. Verification Method
 
-To independently verify this assessment, execute the following commands in `/home/kuo/see-agy`:
+To independently verify this assessment, execute the following commands in `/home/user/see-agy`:
 
 1. **Run E2E Test Suite**:
    ```bash

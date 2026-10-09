@@ -2,7 +2,7 @@
 
 ## 1. Observation
 
-- Workspace Target Directory: `/home/kuo/see-agy/frontend`
+- Workspace Target Directory: `/home/user/see-agy/frontend`
 - Dependencies Installed: Installed `d3`, `socket.io-client`, `lucide-react`, `react`, `react-dom`, `tailwindcss`, `@vitejs/plugin-react`, `vite`, `autoprefixer`, `postcss`.
 - Scaffolding & Config Files Created/Updated:
   - `frontend/tailwind.config.js`: Configured content paths (`./index.html`, `./src/**/*.{js,ts,jsx,tsx}`).
@@ -38,7 +38,7 @@
 
 ## 2. Logic Chain
 
-1. Dependencies were installed cleanly using `npm install` inside `/home/kuo/see-agy/frontend`.
+1. Dependencies were installed cleanly using `npm install` inside `/home/user/see-agy/frontend`.
 2. Tailwind CSS configuration and entry HTML/JSX files were set up to establish the foundation for Vite bundling and styling.
 3. `TreemapCanvas.jsx` uses D3's hierarchy treemap layout engine to compute exact rectangle bounds for workspace directories and files. The HTML5 Canvas 60fps render loop measures time elapsed since incoming file events (`WRITE` / `READ`), linearly fading the color intensity from 1.0 down to 0 over 1500ms. HTML/SVG elements rendered over the Canvas present crisp text for file labels and directory titles, as well as mouse hover tooltips.
 4. `StatusWidget.jsx` visualizes the agent's real-time state via a custom animated SVG mascot and dynamic status indicators.
@@ -51,14 +51,14 @@
 
 ## 4. Conclusion
 
-Milestone 2 (Frontend Visualizer Implementation) is fully implemented, verified, and complete. All source code is located within `/home/kuo/see-agy/frontend/`. Production compilation was verified with `npm run build` exiting with code 0.
+Milestone 2 (Frontend Visualizer Implementation) is fully implemented, verified, and complete. All source code is located within `/home/user/see-agy/frontend/`. Production compilation was verified with `npm run build` exiting with code 0.
 
 ## 5. Verification Method
 
 To independently verify the frontend build:
 
 ```bash
-cd /home/kuo/see-agy/frontend
+cd /home/user/see-agy/frontend
 npm run build
 ```
 

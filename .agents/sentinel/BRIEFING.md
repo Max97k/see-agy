@@ -5,7 +5,7 @@ Monitor AGY Web Visualizer Dashboard development, manage orchestrator lifecycle,
 
 ## 🔒 My Identity
 - Archetype: sentinel
-- Working directory: /home/kuo/see-agy/.agents/sentinel
+- Working directory: /home/user/see-agy/.agents/sentinel
 - Orchestrator: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Victory Auditor: to be spawned on victory claim
 
@@ -28,4 +28,4 @@ Monitor AGY Web Visualizer Dashboard development, manage orchestrator lifecycle,
 - **Retry count**: 0
 
 ## Artifact Index
-- /home/kuo/see-agy/ORIGINAL_REQUEST.md — Verbatim user requirements
+- /home/user/see-agy/ORIGINAL_REQUEST.md — Verbatim user requirements

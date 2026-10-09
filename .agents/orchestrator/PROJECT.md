@@ -2,7 +2,7 @@
 
 ## Architecture
 - **Backend Middleware**: Node.js + Express + Socket.io + Chokidar (`backend/server.js`) listening on Port 3001.
-  - File Watcher: Chokidar watching `/home/kuo/see-agy` excluding `.git`, `node_modules`, `dist`.
+  - File Watcher: Chokidar watching `/home/user/see-agy` excluding `.git`, `node_modules`, `dist`.
   - Log Watcher: Tail watching `~/.gemini/antigravity-cli/brain/*/.system_generated/logs/transcript.jsonl` parsing tool calls (`view_file`, `grep_search`, `write_to_file`, `replace_file_content`).
   - Realtime Broadcasts via Socket.io: `dir_tree`, `file_event`, `agent_status`.
   - Ingestion REST APIs for Mock/Test events: `/api/mock/file_event`, `/api/mock/agent_status`.
@@ -68,10 +68,10 @@
 - `POST /api/mock/agent_status`: Body `{ "status": "working", "model": "Gemini 3.6 Flash (High)", "stepCount": 42 }` -> Broadcasts `agent_status` via Socket.io.
 
 ## Code Layout
-- `/home/kuo/see-agy/backend/`
+- `/home/user/see-agy/backend/`
   - `server.js`
   - `package.json`
-- `/home/kuo/see-agy/frontend/`
+- `/home/user/see-agy/frontend/`
   - `package.json`
   - `vite.config.js`
   - `postcss.config.js`
@@ -84,7 +84,7 @@
     - `components/`
       - `TreemapCanvas.jsx`
       - `StatusWidget.jsx`
-- `/home/kuo/see-agy/scripts/`
+- `/home/user/see-agy/scripts/`
   - `mock_generator.js`
-- `/home/kuo/see-agy/tests/`
+- `/home/user/see-agy/tests/`
   - `e2e.test.js`

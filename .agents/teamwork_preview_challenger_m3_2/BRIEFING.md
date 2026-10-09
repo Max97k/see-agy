@@ -6,7 +6,7 @@ Empirically stress test frontend build and decay loop stability (Milestone 3).
 ## 🔒 My Identity
 - Archetype: EMPIRICAL CHALLENGER
 - Roles: critic, specialist
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_2
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_challenger_m3_2
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Milestone 3 Frontend Build & Decay Stress Testing
 - Instance: challenger_2
@@ -41,7 +41,7 @@ Empirically stress test frontend build and decay loop stability (Milestone 3).
 - Verdict: REJECT due to 2 verified visual decay & rendering flaws.
 
 ## Artifact Index
-- `/home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_2/DISPATCH.md` — Dispatch log
-- `/home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_2/BRIEFING.md` — Working memory briefing
-- `/home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_2/progress.md` — Liveness heartbeat
-- `/home/kuo/see-agy/tests/decay_loop_stress.test.js` — Empirical decay & treemap stress test harness
+- `/home/user/see-agy/.agents/teamwork_preview_challenger_m3_2/DISPATCH.md` — Dispatch log
+- `/home/user/see-agy/.agents/teamwork_preview_challenger_m3_2/BRIEFING.md` — Working memory briefing
+- `/home/user/see-agy/.agents/teamwork_preview_challenger_m3_2/progress.md` — Liveness heartbeat
+- `/home/user/see-agy/tests/decay_loop_stress.test.js` — Empirical decay & treemap stress test harness

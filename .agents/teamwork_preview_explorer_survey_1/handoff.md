@@ -2,15 +2,15 @@
 
 **Author**: `explorer_1`  
 **Phase**: Survey Phase  
-**Target Folder**: `/home/kuo/see-agy`  
-**Metadata Folder**: `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_1`  
+**Target Folder**: `/home/user/see-agy`  
+**Metadata Folder**: `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_1`  
 
 ---
 
 ## 1. Observation
 
 ### 1.1 Files and Codebase Inspection
-- **Project Root**: `/home/kuo/see-agy`
+- **Project Root**: `/home/user/see-agy`
 - **Specification Files**:
   - `ORIGINAL_REQUEST.md` (36 lines): Specs for Backend (Node.js + Express + Socket.io + Chokidar) on Port 3001 and Frontend Dashboard (Vite + React + D3 + Tailwind CSS + Lucide Icons) on Port 3000.
   - `AGY_Web_Visualizer_Development_Plan.md` (129 lines): Architecture diagram, tech stack choices, code samples, and roadmap.
@@ -31,8 +31,8 @@
 - **npm install dry-run check**: Ran `npm install --dry-run` in `frontend/`. Result: `added 226 packages in 5s`.
 - **Port Availability**:
   - Port 3001: **Available**.
-  - Port 3000: **In use** by process `PID 15142` (`kuo 15142 ... node backend/server.js`).
-- **AGY CLI Brain Directory**: `/home/kuo/.gemini/antigravity-cli/brain` (12 session subdirectories present).
+  - Port 3000: **In use** by process `PID 15142` (`user 15142 ... node backend/server.js`).
+- **AGY CLI Brain Directory**: `/home/user/.gemini/antigravity-cli/brain` (12 session subdirectories present).
 
 ---
 
@@ -59,12 +59,12 @@
 
 ## 4. Conclusion
 
-The workspace `/home/kuo/see-agy` is well-prepared for implementation:
+The workspace `/home/user/see-agy` is well-prepared for implementation:
 - **Backend**: Pre-configured and dependencies installed. Operates cleanly on Port 3001.
 - **Frontend**: Pre-configured `package.json`, `vite.config.js`, `postcss.config.js`. Needs `npm install` and standard React component scaffolding (`index.html`, `tailwind.config.js`, `src/App.jsx`, `src/components/TreemapCanvas.jsx`, `src/components/StatusWidget.jsx`).
 - **Actionable Next Steps for Implementer**:
   1. Kill PID 15142 to free Port 3000 (`kill -9 15142`).
-  2. Execute `npm install` in `/home/kuo/see-agy/frontend`.
+  2. Execute `npm install` in `/home/user/see-agy/frontend`.
   3. Create missing frontend files (`index.html`, `tailwind.config.js`, `src/main.jsx`, `src/index.css`, `src/App.jsx`, `src/components/TreemapCanvas.jsx`, `src/components/StatusWidget.jsx`).
   4. Launch backend (`npm start` in `backend`, port 3001) and frontend (`npm run dev` in `frontend`, port 3000).
   5. Test build (`npm run build` in `frontend`).
@@ -77,7 +77,7 @@ To verify the investigation findings and environment readiness:
 
 1. **Verify Backend Dependencies & Port**:
    ```bash
-   cd /home/kuo/see-agy/backend && node -e "require('chokidar'); require('socket.io'); require('express'); console.log('Backend packages OK');"
+   cd /home/user/see-agy/backend && node -e "require('chokidar'); require('socket.io'); require('express'); console.log('Backend packages OK');"
    ```
 2. **Check Port 3000 Process**:
    ```bash
@@ -85,7 +85,7 @@ To verify the investigation findings and environment readiness:
    ```
 3. **Verify Frontend Dry-Run Installation**:
    ```bash
-   cd /home/kuo/see-agy/frontend && npm install --dry-run
+   cd /home/user/see-agy/frontend && npm install --dry-run
    ```
 4. **Verify Health Endpoint (once backend runs on 3001)**:
    ```bash

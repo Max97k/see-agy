@@ -4,7 +4,7 @@
 Build a non-invasive web visualizer dashboard monitoring file changes via chokidar and AGY transcript log events, rendering a 2D Treemap matrix with a 1.5s visual decay loop and mascot working state animation.
 
 ## Phases & Strategy
-1. **Survey (Phase 0)**: Dispatch 3 parallel Explorers to inspect existing codebase structure in `/home/kuo/see-agy`, AGY log location (`~/.gemini/antigravity-cli/brain/*/logs/transcript.jsonl`), dependencies, package setups, etc.
+1. **Survey (Phase 0)**: Dispatch 3 parallel Explorers to inspect existing codebase structure in `/home/user/see-agy`, AGY log location (`~/.gemini/antigravity-cli/brain/*/logs/transcript.jsonl`), dependencies, package setups, etc.
 2. **Decomposition (Phase 1)**: Formulate `PROJECT.md` with full feature inventory, interface contracts, and milestone breakdown.
 3. **Execution (Phase 2)**:
    - **Track 1**: E2E Testing Track — build opaque-box E2E test runner and test cases (Tiers 1-4).

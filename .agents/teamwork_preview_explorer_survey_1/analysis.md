@@ -1,6 +1,6 @@
 # Survey Analysis Report: AGY CLI Web Visualizer Dashboard
 
-**Target Workspace**: `/home/kuo/see-agy`  
+**Target Workspace**: `/home/user/see-agy`  
 **Date**: 2026-07-26  
 **Investigator**: `explorer_1`  
 **Milestone**: Survey Phase  
@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-This report presents the complete survey of the workspace `/home/kuo/see-agy`, the system execution environment, existing backend/frontend code bases, and dependency state for building the non-invasive **AGY CLI Web Visualizer Dashboard**.
+This report presents the complete survey of the workspace `/home/user/see-agy`, the system execution environment, existing backend/frontend code bases, and dependency state for building the non-invasive **AGY CLI Web Visualizer Dashboard**.
 
 The project aims to monitor local file system changes (WRITE events via `chokidar`) and AGY CLI transcript logs (READ events & Agent status via `transcript.jsonl`), streaming data via `Socket.io` to a Vite + React + D3 + Tailwind CSS frontend that renders a 2D Treemap matrix with a 1.5-second visual decay loop.
 
@@ -19,7 +19,7 @@ The project aims to monitor local file system changes (WRITE events via `chokida
 
 ### 2.1 File & Directory Map
 ```
-/home/kuo/see-agy
+/home/user/see-agy
 ├── .agents/
 │   └── teamwork_preview_explorer_survey_1/   # Metadata directory for explorer_1
 │       ├── DISPATCH.md
@@ -101,10 +101,10 @@ The existing `backend/server.js` contains a well-structured implementation (~168
 | **Frontend Dependencies** | React 18.3.1, D3 7.9.0, Socket.io-client 4.7.5, Lucide-react 0.380.0, Vite 5.2.11, Tailwind 3.4.4 | Defined in `frontend/package.json`; needs `npm install` |
 | **Port 3001 (Backend)** | **Available** | Express + Socket.io server ready to listen on 3001 |
 | **Port 3000 (Frontend)** | **Occupied by PID 15142** | Process `node backend/server.js` is currently running on port 3000 from a previous run |
-| **AGY Brain Directory** | `/home/kuo/.gemini/antigravity-cli/brain` | 12 session folders present |
+| **AGY Brain Directory** | `/home/user/.gemini/antigravity-cli/brain` | 12 session folders present |
 
 ### Port Conflict Discovery & Remediation Strategy:
-- Process `PID 15142` (`kuo 15142 ... node backend/server.js`) is currently occupying port 3000.
+- Process `PID 15142` (`user 15142 ... node backend/server.js`) is currently occupying port 3000.
 - Per `ORIGINAL_REQUEST.md`, **Backend must run on Port 3001** and **Frontend on Port 3000**.
 - **Action Needed**: Terminate stale PID 15142 (`kill -9 15142`) before starting the Vite frontend on port 3000 and backend on port 3001.
 
@@ -116,7 +116,7 @@ The existing `backend/server.js` contains a well-structured implementation (~168
 To maintain clean separation of concerns and standard Vite + React project layout:
 
 ```
-/home/kuo/see-agy
+/home/user/see-agy
 ├── backend/
 │   ├── package.json
 │   ├── package-lock.json

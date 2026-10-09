@@ -3,23 +3,23 @@
 **Agent**: `explorer_3`  
 **Phase**: Survey (Phase 0)  
 **Date**: 2026-07-26  
-**Target Path**: `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_3/handoff.md`  
+**Target Path**: `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_3/handoff.md`  
 
 ---
 
 ## 1. Observation
 
 1. **Existing Codebase & Setup**:
-   - `/home/kuo/see-agy/ORIGINAL_REQUEST.md`: Requirements specify Express + Socket.io + Chokidar backend listening on Port 3001, Vite + React + D3 + Tailwind CSS frontend visualizer, 1.5s linear decay loop (`WRITE` = Orange, `READ` = Blue), and Status Widget.
-   - `/home/kuo/see-agy/AGY_Web_Visualizer_Development_Plan.md`: Details architecture layout including Chokidar watcher blacklists, 1.5-second visual decay algorithm using `performance.now()`, and working mascot widget.
-   - `/home/kuo/see-agy/backend/server.js`: Currently contains initial backend implementation:
+   - `/home/user/see-agy/ORIGINAL_REQUEST.md`: Requirements specify Express + Socket.io + Chokidar backend listening on Port 3001, Vite + React + D3 + Tailwind CSS frontend visualizer, 1.5s linear decay loop (`WRITE` = Orange, `READ` = Blue), and Status Widget.
+   - `/home/user/see-agy/AGY_Web_Visualizer_Development_Plan.md`: Details architecture layout including Chokidar watcher blacklists, 1.5-second visual decay algorithm using `performance.now()`, and working mascot widget.
+   - `/home/user/see-agy/backend/server.js`: Currently contains initial backend implementation:
      - Lines 21-49: `getDirTree` function scanning workspace hierarchy, ignoring `.git`, `node_modules`, `dist`, `build`.
      - Lines 52-60: `chokidar.watch` watching root directory with `awaitWriteFinish`.
      - Lines 78-97: `agentState` object and `updateAgentStatus` function with 3000ms idle timer.
      - Lines 99-141: Log watcher targeting `~/.gemini/antigravity-cli/brain/*/logs/transcript.jsonl` parsing tool calls for `view_file` and `grep_search`.
      - Lines 144-158: Socket.io connection handling emitting initial `dir_tree` and `agent_status`.
-   - `/home/kuo/see-agy/backend/package.json`: Dependencies `chokidar` (^3.6.0), `cors` (^2.8.5), `express` (^4.19.2), `socket.io` (^4.7.5).
-   - `/home/kuo/see-agy/frontend/package.json`: Dependencies `d3` (^7.9.0), `lucide-react` (^0.380.0), `react` (^18.3.1), `react-dom` (^18.3.1), `socket.io-client` (^4.7.5), `tailwindcss` (^3.4.4), `vite` (^5.2.11).
+   - `/home/user/see-agy/backend/package.json`: Dependencies `chokidar` (^3.6.0), `cors` (^2.8.5), `express` (^4.19.2), `socket.io` (^4.7.5).
+   - `/home/user/see-agy/frontend/package.json`: Dependencies `d3` (^7.9.0), `lucide-react` (^0.380.0), `react` (^18.3.1), `react-dom` (^18.3.1), `socket.io-client` (^4.7.5), `tailwindcss` (^3.4.4), `vite` (^5.2.11).
 
 2. **Frontend Files**:
    - `frontend/` directory lacks `src/` directory and components (`App.jsx`, `TreemapCanvas.jsx`, `StatusWidget.jsx`).
@@ -49,13 +49,13 @@
 2. **Frontend Visualizer**: Vite + React + D3 + Canvas architecture is validated. D3 calculates squarified layout rectangles, Canvas renders the 1.5s fading orange/blue highlights, and SVG/HTML renders directory labels, tooltips, and the Mascot Status Widget.
 3. **E2E Testability**: Dual-mode mock strategy (HTTP Mock endpoints + `scripts/mock_generator.js`) allows Playwright E2E tests to execute reliably without needing live AGY CLI runs.
 
-Detailed architecture report has been written to `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_3/analysis.md`.
+Detailed architecture report has been written to `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_3/analysis.md`.
 
 ---
 
 ## 5. Verification Method
 
 To verify the architecture report and requirements independently:
-1. Inspect `/home/kuo/see-agy/.agents/teamwork_preview_explorer_survey_3/analysis.md` to review full data schemas, decay algorithm formulas, D3 pipeline code blueprints, and E2E mock endpoint specifications.
-2. Inspect `/home/kuo/see-agy/backend/server.js` to verify existing event handling and socket emissions.
+1. Inspect `/home/user/see-agy/.agents/teamwork_preview_explorer_survey_3/analysis.md` to review full data schemas, decay algorithm formulas, D3 pipeline code blueprints, and E2E mock endpoint specifications.
+2. Inspect `/home/user/see-agy/backend/server.js` to verify existing event handling and socket emissions.
 3. Check `backend/package.json` and `frontend/package.json` for installed dependencies.

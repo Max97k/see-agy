@@ -6,12 +6,12 @@ Implement Frontend Visualizer (React 18 + D3 + HTML5 Canvas + Tailwind CSS + Soc
 ## 🔒 My Identity
 - Archetype: worker_m2_frontend
 - Roles: implementer, qa, specialist
-- Working directory: /home/kuo/see-agy/.agents/teamwork_preview_worker_m2_frontend
+- Working directory: /home/user/see-agy/.agents/teamwork_preview_worker_m2_frontend
 - Original parent: 5ae6c0de-44e3-40ad-99f5-3948e9e32d10
 - Milestone: Milestone 2 - Frontend Visualizer Implementation
 
 ## 🔒 Key Constraints
-- Ownership: /home/kuo/see-agy/frontend/
+- Ownership: /home/user/see-agy/frontend/
 - No fake/hardcoded implementations, no integrity shortcuts.
 - HTML5 Canvas 60fps rendering for Treemap activity decay.
 - SVG/HTML overlay for labels/tooltips.

@@ -1,14 +1,14 @@
 ## 2026-07-26T13:49:36Z
-You are worker_m2_fix_gen1 assigned to remediate 2 defects in /home/kuo/see-agy/frontend/src/components/TreemapCanvas.jsx.
-Working directory for metadata: /home/kuo/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1
+You are worker_m2_fix_gen1 assigned to remediate 2 defects in /home/user/see-agy/frontend/src/components/TreemapCanvas.jsx.
+Working directory for metadata: /home/user/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1
 
 MANDATORY READ:
-1. /home/kuo/see-agy/ORIGINAL_REQUEST.md
-2. /home/kuo/see-agy/.agents/orchestrator/PROJECT.md
-3. /home/kuo/see-agy/.agents/teamwork_preview_challenger_m3_2/handoff.md
+1. /home/user/see-agy/ORIGINAL_REQUEST.md
+2. /home/user/see-agy/.agents/orchestrator/PROJECT.md
+3. /home/user/see-agy/.agents/teamwork_preview_challenger_m3_2/handoff.md
 
 WRITE OWNERSHIP FILE BOUNDARIES:
-- Exclusive ownership: /home/kuo/see-agy/frontend/src/components/TreemapCanvas.jsx
+- Exclusive ownership: /home/user/see-agy/frontend/src/components/TreemapCanvas.jsx
 - Read access: all project files.
 
 MANDATORY INTEGRITY WARNING:
@@ -33,7 +33,7 @@ DEFECTS TO REMEDIATE:
 VERIFICATION:
 1. Run `node tests/decay_loop_stress.test.js` to verify both tests pass.
 2. Run `node tests/e2e.test.js` to verify all 11 E2E tests pass.
-3. Run `npm run build` in `/home/kuo/see-agy/frontend` to verify clean compilation.
+3. Run `npm run build` in `/home/user/see-agy/frontend` to verify clean compilation.
 
 OUTPUT:
-Write your handoff report to /home/kuo/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1/handoff.md with full command execution and build/test outputs. Send a message when finished.
+Write your handoff report to /home/user/see-agy/.agents/teamwork_preview_worker_m2_fix_gen1/handoff.md with full command execution and build/test outputs. Send a message when finished.

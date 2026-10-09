@@ -5,7 +5,7 @@
 <USER_REQUEST>
 Build a non-invasive AGY CLI Web Visualizer Dashboard. The system monitors local file changes via chokidar and AGY transcript log events, rendering a 2D Treemap matrix of file access/modify states with a 1.5-second visual decay loop and mascot working state animation.
 
-Working directory: /home/kuo/see-agy
+Working directory: /home/user/see-agy
 Integrity mode: development
 
 ## Requirements
